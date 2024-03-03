@@ -18,11 +18,11 @@ export async function createNote(note: NoteInput): Promise<Note> {
 }
 
 export async function deleteNote(noteId: string) {
-    const response = await axios.delete(`https://notesappapi.vercel.app/${noteId}`, { withCredentials: true });
+    const response = await axios.delete(`https://notesappapi.vercel.app/api/notes/${noteId}`, { withCredentials: true });
     return response;
 }
 
 export async function updateNote(noteId: string, note: NoteInput): Promise<Note> {
-    const response = await axios.patch(`https://notesappapi.vercel.app/${noteId}`, note, { withCredentials: true });
+    const response = await axios.patch(`https://notesappapi.vercel.app/api/notes/${noteId}`, note, { withCredentials: true });
     return response.data;
 }
