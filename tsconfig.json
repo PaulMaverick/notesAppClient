@@ -19,9 +19,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+
+    //node_modules/@types/react/index"' has no default export error
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
     "typeRoots": [
       "node_modules/@types"
-    ]
+    ]   
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }],
